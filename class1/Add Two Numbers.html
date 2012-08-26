@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0059)http://girldevelopit.com/classwork/AddTwoNumbersClass1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		
+		<title>Add Two Numbers</title>
+		<script type="text/javascript">
+			var y = 8;
+			
+			function AddTwoNumbers(a, b)
+			{
+				return a+b;
+			}
+			
+			function SubtractTwoNumbers(a, b)
+			{
+				return a - b;
+			}
+			function MultiplyTwoNumbers(a, b)
+			{
+				return a * b;
+			}
+			function DivideTwoNumbers(a, b)
+			{
+				return a / b;
+			}
+			
+			
+			function GetNumbers(a)
+			{				
+						
+				y = 4;
+				var x = document.getElementById("Numbers").value;
+				x = parseInt(x);
+				if (x) {
+					if (a == '+') {
+						document.getElementById("Result").value = AddTwoNumbers(y, x);
+					}
+					else if(a == '-')
+					{
+						document.getElementById("Result").value = SubtractTwoNumbers(y, x);
+					}
+					else if(a == '/')
+					{
+						document.getElementById("Result").value = DivideTwoNumbers(y, x);
+					}
+					else{
+						document.getElementById("Result").value = MultiplyTwoNumbers(y, x);
+					}
+				}
+				else
+				{
+					document.getElementById("Error").innerHTML = "Hey! That's not a number!";
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="Numbers">
+		<button onclick="GetNumbers(&#39;+&#39;)">Click to Add</button>
+		<button onclick="GetNumbers(&#39;-&#39;)">Click to Subtract</button>
+		
+		<button onclick="GetNumbers(&#39;*&#39;)">Click to Multiply</button>
+		<button onclick="GetNumbers(&#39;/&#39;)">Click to Divide</button>
+		<input type="text" id="Result">
+		<label id="Error" style="color:red"></label>
+	
+
+</body></html>
